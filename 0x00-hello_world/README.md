@@ -1,0 +1,1 @@
+This is the directory for the first project in PP 1000 where we begin to learn the C progamming language, titled 0x00. C-Hello, World
