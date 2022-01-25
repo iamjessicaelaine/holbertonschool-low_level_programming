@@ -1,0 +1,1 @@
+This directory will contain the responses for my Holberton School course PP 1000 for the project in 0x02.
