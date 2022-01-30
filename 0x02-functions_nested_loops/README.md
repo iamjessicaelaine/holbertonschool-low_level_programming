@@ -1,0 +1,1 @@
+This folder contains code for tasks in project 0x02 C - Functions, nested loops at Holberton School. 
