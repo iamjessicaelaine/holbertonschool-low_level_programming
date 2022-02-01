@@ -1,0 +1,1 @@
+This is the directory that will contain the responses to task within Project 0x04 course PP1000 at Holberton School.
