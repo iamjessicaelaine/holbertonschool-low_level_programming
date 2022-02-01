@@ -13,12 +13,12 @@ int main(void)
 
         i = 0;
 
-        while (i < 10) /* we haven't told i variable what to do like whether to increment or decrease so with i equalling 0 it will always be less than 10 and the computer does not know when to exit the while loop, so somewhere within this loop we need to give the i variable some way to interact with the argument */
+        /* while (i < 10)
         {
                 putchar(i);
-        }
+        } */
 
-        printf("Infinite loop avoided! \\o/\n");
+        printf("Infinite loop avoided! \\o/\n"); 
 
         return (0);
 }
