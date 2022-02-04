@@ -1,0 +1,1 @@
+This folder contains responses to tasks in project 0x05 course pp1000 at holberton school in tulsa. 
