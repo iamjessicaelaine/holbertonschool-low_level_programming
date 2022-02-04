@@ -14,6 +14,8 @@ char *start_ptr;
 char *end_ptr;
 char i;
 
+int _strlen(char *s);
+
 length = _strlen(s);
 
 start_ptr = s;
