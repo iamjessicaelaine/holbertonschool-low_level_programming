@@ -1,0 +1,18 @@
+#include "main.h"
+
+/**
+ * swap_int  -  swaps the value of two integers
+ * @a: a is an integer
+ * @b: b is an integer
+ * @purp: temp variable used for the swap
+ * Return: return 0 for success
+*/
+
+void swap_int(int *a, int *b)
+{
+int purp;
+
+purp = *a;
+*a = *b;
+*b = purp;
+}
