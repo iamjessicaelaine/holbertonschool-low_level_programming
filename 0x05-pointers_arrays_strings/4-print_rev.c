@@ -2,31 +2,22 @@
 
 /**
  * print_rev  - prints a string in reverse followed by new line
- * _strlen - prints the length of a string
  * @s: a string
- * Return: return string in reverse for success
+ * Return: return void
 */
-
-int _strlen(char *s);
 
 void print_rev(char *s)
 {
-int len, i;
-char *start, *end, temp;
+int x;
+int y;
 
-len = _strlen(s);
-start = s;
-end = s;
-
-for (i = 0; i < len - 1; i++)
-end++;
-for (i = 0; i < len / 2; i++)
+for (x = 0; s[x] != '\0'; x++)
 {
-temp = *end;
-*end = *start;
-*start = temp;
-
-start++;
-end--;
+continue;
 }
+for (y = x - 1; y >= 0; y--)
+{
+_putchar(s[y]);
+}
+_putchar('\n');
 }
