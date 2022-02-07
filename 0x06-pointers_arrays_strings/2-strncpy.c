@@ -19,6 +19,6 @@ while (*src && n--)
 j++;
 src++;
 }
-*j = '\0';
-return (dest);
+
+return (j);
 }
