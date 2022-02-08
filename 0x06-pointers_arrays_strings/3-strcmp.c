@@ -17,7 +17,7 @@ break;
 s1++;
 s2++;
 }
-if (*s1 == '\0' && *s2 == '\0')
+if (*s1 == *s2)
 return (0);
 else
 return (-1);
