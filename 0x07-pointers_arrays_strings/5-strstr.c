@@ -9,19 +9,16 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-char *Begin = haystack;
-char *pattern = needle;
-
-while (*haystack)
-{
-while (*haystack && *pattern && *haystack == *pattern)
+while (*haystack != *needle && *haystack != '\0')
 {
 haystack++;
-pattern++;
 }
-if (!*pattern)
-return (Begin);
-haystack = Begin + 1;
+if (*haystack == *needle)
+{
+return (haystack);
 }
+else
+{
 return (NULL);
+}
 }
