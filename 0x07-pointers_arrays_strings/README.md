@@ -1,0 +1,1 @@
+This directory contains tasks related to project 0x07. C- Even more pointers, arrays and strings in course PP1100 Basic Procedural Programming at holberton School in Tulsa.
