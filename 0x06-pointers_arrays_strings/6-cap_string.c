@@ -2,8 +2,8 @@
 
 /**
  * cap_string - function that capitalizes all words of a string
- * @j - a string ready to get some capitalization
- * Return - a string with all words capitalized when successful
+ * @j: a string ready to get some capitalization
+ * Return: a string with all words capitalized when successful
  */
 
 char *cap_string(char *j)
