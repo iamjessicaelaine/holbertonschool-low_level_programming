@@ -1,0 +1,1 @@
+This directory will contain the tasks associated with Project 0x09, C - Static Libraries for course PP1100 at Holberton School.
