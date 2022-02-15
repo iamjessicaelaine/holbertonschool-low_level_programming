@@ -1,0 +1,1 @@
+This directory contains repsonses for project 0x0A. C - argc, argv, in course PP1100 at Holberton School.
