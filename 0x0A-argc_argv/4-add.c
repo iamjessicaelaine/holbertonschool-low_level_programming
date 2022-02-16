@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+/**
+ * main - adds positive nmbers
+ * @argc: size of argv
+ * @argv: an array of command line arguments
+ * Return: some fun & correct stuff hopeully
+ */
+
+int main(int argc, char *argv[])
+{
+int sum = 0;
+int j = 1;
+
+if (argc == 0)
+{
+printf("0\n");
+}
+else if (isdigit(argv[j]))
+{
+for (j = 1; j < argc; j++)
+{
+sum += atoi(argv[j]);
+printf("%d\n", sum);
+} 
+}
+else
+{
+printf("Error\n");
+return (1);
+}
+return (0);
+}
