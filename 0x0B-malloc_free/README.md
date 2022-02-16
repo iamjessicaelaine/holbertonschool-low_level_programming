@@ -1,0 +1,1 @@
+This directory will contain the tasks for project 0x0C. C - malloc, free in course PP1100 at Holberton School.
