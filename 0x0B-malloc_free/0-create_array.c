@@ -15,7 +15,7 @@ char *j;
 unsigned int e = 0;
 
 j = malloc((size) * sizeof(char));
-if (j == NULL && size == 0)
+if (j == NULL)
 {
 return (NULL);
 }
@@ -23,6 +23,10 @@ while (e < size)
 {
 j[e] = c;
 e++;
+}
+if (size == 0)
+{
+return (NULL);
 }
 j[e] = '\0';
 return (j);
