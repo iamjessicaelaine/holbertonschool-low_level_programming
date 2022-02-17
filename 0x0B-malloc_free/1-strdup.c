@@ -14,11 +14,11 @@ char *cpystr;
 char *j;
 int e = 0;
 
-if (str == NULL)
+if (str == NULL && str == "")
 {
 return (NULL);
 }
-while (str[e] != 0)
+while (str[e])
 {
 e++;
 cpystr = malloc(e);
