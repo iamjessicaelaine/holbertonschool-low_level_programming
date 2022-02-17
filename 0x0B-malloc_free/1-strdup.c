@@ -18,7 +18,7 @@ if (str == NULL)
 {
 return (NULL);
 }
-while (str[e] != '\0')
+while (str[e] != 0)
 {
 e++;
 cpystr = malloc(e + 1);
