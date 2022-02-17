@@ -21,7 +21,7 @@ return (NULL);
 while (str[e])
 {
 e++;
-cpystr = malloc(e - 1);
+ cpystr = malloc((e + 1) * sizeof(char));
 j = cpystr;
 }
 if (j == NULL)
