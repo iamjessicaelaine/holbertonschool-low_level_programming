@@ -18,10 +18,10 @@ if (str == NULL)
 {
 return (NULL);
 }
-while (str[e])
+while (str[e] != '\0')
 {
 e++;
-cpystr = malloc((e + 1) * sizeof(str));
+cpystr = malloc(e + 1);
 j = cpystr;
 }
 if (j == NULL)
