@@ -1,0 +1,1 @@
+This folder contains all of the files associated with Project 0x0D: C - Preprocessor in course PP1100 at Holberton School.
