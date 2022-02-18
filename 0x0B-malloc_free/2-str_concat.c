@@ -19,17 +19,18 @@ char *str_concat(char *s1, char *s2)
 	/* dynamically allocate memory for the two concatenated strings */
 	j = malloc(_strlen(s1) + _strlen(s2) + 1);
 
+	/* if memory cannot be allocated return null for failure */
 	if (j == NULL)
 	{
 		return (NULL);
 	}
-	while (*s1 != '\0' && s1 == NULL)
+	while (*s1 != '\0')
 	{
 		j[i] = *s1;
 		s1++;
 		i++;
 	}
-	while (*s2 != '\0' && s2 == NULL)
+	while (*s2 != '\0')
 	{
 		j[i] = *s2;
 		s2++;
