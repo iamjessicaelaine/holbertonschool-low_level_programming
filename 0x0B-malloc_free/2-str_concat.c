@@ -1,0 +1,51 @@
+#include <stdlib.h>
+#include "main.h"
+
+int _strlen(char *s);
+
+/**
+ * str_concat - concatenates two strings and dynamically allocates its memory
+ * @s1: the leading string
+ * @s2: the string to follow
+ * Return: a pointer to a newly allocagtd space in memory that contains s1 & s2
+ * or NULL on failure of memory allocation
+ */
+
+char *str_concat(char *s1, char *s2)
+{
+	int i = 0;
+	char *j; /* this is the pointer to the two concatenated strings */
+
+	/* dynamically allocate memory for the two concatenated strings */
+	j = malloc(_strlen(s1) + _strlen(s2) + 1);
+
+	if (j == NULL)
+	{
+		return (NULL);
+	}
+	while (*s1 != '\0' || s1 == NULL)
+	{
+		j[i] = *s1;
+		s1++;
+		i++;
+	}
+	while (*s2 != '\0' || s2 == NULL)
+	{
+		j[i] = *s2;
+		s2++;
+		i++;
+	}
+	return (j);
+}
+
+int _strlen(char *s)
+{
+	int purp = 0;
+	while (*s != '\0')
+	{
+		purp++;
+		s++;
+	}
+	return (purp);
+}
+
