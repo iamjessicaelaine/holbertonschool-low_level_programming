@@ -23,14 +23,22 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	while (*s1 != '\0' || s1 == NULL)
+	while (*s1 != '\0')
 	{
+		if (s1 == NULL)
+		{
+			break;
+		}
 		j[i] = *s1;
 		s1++;
 		i++;
 	}
-	while (*s2 != '\0' || s2 == NULL)
+	while (*s2 != '\0')
 	{
+		if (s2 == NULL)
+		{
+			break;
+		}
 		j[i] = *s2;
 		s2++;
 		i++;
@@ -38,9 +46,16 @@ char *str_concat(char *s1, char *s2)
 	return (j);
 }
 
+/**
+ * _strlen  -  returns the length of a string
+ * @s: s is a string
+ * Return: return length of string for success
+*/
+
 int _strlen(char *s)
 {
 	int purp = 0;
+
 	while (*s != '\0')
 	{
 		purp++;
