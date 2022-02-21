@@ -1,0 +1,1 @@
+This folder contains responses for tasks in Project 0x0E: C - More malloc, free in course PP1100 at Holberton School.
