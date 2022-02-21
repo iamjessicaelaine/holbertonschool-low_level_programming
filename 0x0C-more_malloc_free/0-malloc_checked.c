@@ -10,12 +10,16 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *j;
+	/* pointer variable used to hold the address of memory allocated */
+	int *j;
 
-	j = malloc(sizeof(unsigned int) * (b));
+	/* memory allocation */
+	j = malloc(b);
+	/* check for malloc failure */
 	if (j == NULL)
 	{
 		exit(98);
 	}
+	/* malloc success return the address for newly allocated memory */
 	return (j);
 }
