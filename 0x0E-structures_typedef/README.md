@@ -1,0 +1,1 @@
+This directory contains tasks associated with Project 0x0E: C - Structures, typedef for coures PP1100 at Holberton School. 
