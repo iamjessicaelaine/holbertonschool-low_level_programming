@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-int *_memset(int *s, int b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n);
 
 /**
  * _calloc - allocates and initializes memory for an array
@@ -15,7 +15,7 @@ int *_memset(int *s, int b, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	/* pointer variable to hold address of memory allocated */
-	int *j;
+	char *j;
 	/* if nmemb or size is 0 function returns null */
 	if (nmemb == 0 || size == 0)
 	{
@@ -40,7 +40,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * Return: a pointer to the memory area s
  */
 
-int *_memset(int *s, int b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 unsigned int j;
 

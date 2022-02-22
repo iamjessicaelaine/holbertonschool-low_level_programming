@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 
+char *_memset(char *s, char b, unsigned int n);
 
 /**
  * _calloc - allocates and initializes memory for an array
@@ -15,7 +15,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	/* pointer variable to hold address of memory allocated */
-	int *j;
+	char *j;
 	/* if nmemb or size is 0 function returns null */
 	if (nmemb == 0 || size == 0)
 	{
@@ -29,6 +29,22 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	/* set memory to 0 */
-	memset(j, 0, nmemb * size);
+	_memset(j, 0, nmemb * size);
 	return (j);
+}
+/**
+ * _memset - a function that fills memory with a constant byte
+ * @s: pointer to a memory area
+ * @b: the contstant byte
+ * @n: a number of bytes
+ * Return: a pointer to the memory area s
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+unsigned int j;
+
+for (j = 0; j < n; j++)
+s[j] = b;
+return (s);
 }
