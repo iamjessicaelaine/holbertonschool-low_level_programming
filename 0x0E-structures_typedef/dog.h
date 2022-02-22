@@ -10,10 +10,10 @@
 
 /**
  * struct dog - multivariable w/ three members
- * @name - points to the dogs name
- * @age - contains the dogs age
- * @owner - points to the name of owner
- */
+ * @name: points to the dogs name
+ * @age: contains the dogs age
+ * @owner: points to the name of owner
+*/
 
 struct dog
 {
