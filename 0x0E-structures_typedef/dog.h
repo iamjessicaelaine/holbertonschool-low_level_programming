@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+
 /* structures */
 
 /**
@@ -21,6 +22,11 @@ struct dog
 	float age;
 	char *owner;
 };
+
+
+/* prototypes */
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 
 #endif /* DOG_H */
