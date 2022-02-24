@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "function_pointers.h"
+
+/**
+ * print_name - prints a name
+ * @name: char pointer to address of name
+ * @f: function pointer to function f
+ * Return: void
+ */
+
+/**
+ * f - function that prints a name
+ * @j: char pointer to a name
+ * Return: void
+ */
+
+void f(char *j)
+{
+	char x;
+	x = &j;
+	
+   	_putchar(x);
+}
+
+void print_name(char *name, void (*f)(char *))
+{
+	f(name);
+}
