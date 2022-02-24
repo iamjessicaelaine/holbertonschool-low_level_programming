@@ -1,0 +1,1 @@
+This directory contains task responses for Project 0x10 C - Function Pointers in Course 1100 at Holberton School.
