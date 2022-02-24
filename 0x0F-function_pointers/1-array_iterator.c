@@ -17,7 +17,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	if (array && size && action) /* protects function's func from NULL */
 		while (j < size) /* loop to access ea. element so it's func'd */
 		{
-			j++;
 			action(array[j]);
-		}
+			j++;
+ 		}
 }
