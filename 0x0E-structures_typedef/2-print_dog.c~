@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "dog.h"
+
+/**
+ * print_dog - prints a struct dog
+ * @d: points to structure variable dog
+ * Return: void
+ */
+
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
+	{
+		return;
+	}
+	d->name = name;
+	if (d->name == NULL)
+	{
+		name = "(nil)";
+	}
+	d->age = age;
+	if (d->age == NULL)
+	{
+		age = "(nil)";
+	}
+	d->owner = owner;
+	if (d->owner == NULL)
+	{
+		owner = "(nil)";
+	}
+	printf("Name: %s\n", name);
+	printf("Age: %f\n", age);
+	printf("Owner: %s\n", owner);
+}
