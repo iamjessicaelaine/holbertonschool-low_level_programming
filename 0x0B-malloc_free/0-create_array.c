@@ -28,6 +28,5 @@ if (size == 0)
 {
 return (NULL);
 }
-j[e] = '\0';
 return (j);
 }
