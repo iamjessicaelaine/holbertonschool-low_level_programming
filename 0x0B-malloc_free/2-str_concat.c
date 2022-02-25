@@ -16,6 +16,14 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	char *j; /* this is the pointer to the two concatenated strings */
 
+	if (s1 == NULL) /* if statements deciding what to do with null s1 & s2*/
+	{
+		s1 = " ";
+	}
+	if (s2 == NULL)
+	{
+		s2 = " ";
+	}
 	/* dynamically allocate memory for the two concatenated strings */
 	j = malloc(_strlen(s1) + _strlen(s2) + 1);
 
@@ -24,19 +32,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	if (s1 == NULL)
-	{
-		s1 = " ";
-	}
 	while (*s1 != '\0')
 	{
 		j[i] = *s1;
 		s1++;
 		i++;
-	}
-	if (s2 == NULL)
-	{
-		s2 = " ";
 	}
 	while (*s2 != '\0')
 	{
