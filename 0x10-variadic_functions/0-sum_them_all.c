@@ -13,15 +13,15 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int j; /* counter variable */
 	unsigned int sum = 0; /* return variable */
 
-	va_start(args, n);
+	va_start(args, n); /* initializes va_list & notes last required arg */
 	if (n == 0 || args == NULL) /* protect function func from 0 & null */
 	{
 		return (0);
 	}
 	for (j = 0; j < n; j++)
 	{
-		sum += va_arg(args, unsigned int);
+		sum += va_arg(args, unsigned int); /* va_arg pulls each arg */
 	}
-	va_end(args);
+	va_end(args); /* need this for portability - not required by gcc */
 	return (sum);
 }
