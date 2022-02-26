@@ -13,7 +13,9 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int j; /* counter variable */
 	unsigned int sum = 0; /* return variable */
 
-	va_start(args, n); /* initializes va_list & notes last required arg */
+	va_start(args, n); /* initializes va_list to point to the first optional
+			    * argument & notes last required arg
+			    */
 	if (n == 0 || args == NULL) /* protect function func from 0 & null */
 	{
 		return (0);
