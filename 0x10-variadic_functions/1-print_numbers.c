@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n); /* initializes args & enables access to variadic
 			    * function arguments.
 			    */
-	while (j < n && separator != NULL)
+	while (j < n)
 	{
 		printf("%d", va_arg(args, int));
 		j++;
