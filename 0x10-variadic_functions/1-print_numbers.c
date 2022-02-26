@@ -21,23 +21,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		return;
 	}
-	else if (separator != NULL) /* capturing the null */
-	{
-		while (j < n)
-		{
-		       printf("%d%s", va_arg(args, int), separator);
-		       j++;
-		}
-		printf("\n");
-		va_end(args);
-		return;
-	}
 	while (j < n)
 	{
-		j++;
 		printf("%d", va_arg(args, int));
+		j++;
+		if (separator != NULL)
+		{
+			printf("%s", separator);
+		}
 	}
 	printf("\n");
 	va_end(args);
-	return;
 }
