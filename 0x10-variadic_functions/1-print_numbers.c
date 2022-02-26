@@ -17,10 +17,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(args, n); /* initializes args & enables access to variadic
 			    * function arguments.
 			    */
-	if (n == 0 || args == NULL) /* protect function frm empty list of arg */
-	{
-		return;
-	}
 	while (j < n && separator != NULL)
 	{
 		printf("%d", va_arg(args, int));
