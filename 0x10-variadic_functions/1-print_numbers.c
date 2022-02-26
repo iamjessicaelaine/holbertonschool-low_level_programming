@@ -23,13 +23,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	while (j < n && separator != NULL)
 	{
-		printf("%d%s", va_arg(args, int), separator);
+		printf("%d", va_arg(args, int));
 		j++;
-		/* printf("%s", separator);*/
-		/*if (j < (n - 1) && separator != NULL)
+		if (j <= (n - 1) && separator != NULL)
 		{
 			printf("%s", separator);
-			}*/
+			}
 	}
 	printf("\n");
 	va_end(args);
