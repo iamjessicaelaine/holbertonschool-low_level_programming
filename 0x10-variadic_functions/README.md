@@ -1,0 +1,1 @@
+This dirctory contains task for project 0x10 C - Variadic Functions for course PP1200 at Holberton School.
