@@ -3,7 +3,7 @@
 /**
  * list_len - returns the number of elements in linked list_t list
  * @head: points to the linked list list_t
- * Returns: the number of elements in linked list_t list
+ * Return: the number of elements in linked list_t list
  */
 
 size_t list_len(const list_t *head)
