@@ -1,0 +1,1 @@
+This folder contains code for tasks in Project 0x12: C - Singly Linked Lists in Course PP1200 at Holberton School.
