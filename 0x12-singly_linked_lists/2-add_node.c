@@ -13,20 +13,19 @@ int _strlen(char *s);
 list_t *add_node(list_t **head, const char *string)
 {
 	list_t *new_node;
+	char *newstring = strdup(string);
 
 	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
+	if (new_node == NULL || newstring == NULL)
 	{
+		free(new_node);
+		free(newstring);
 		return (NULL);
 	}
-	new_node->str = strdup(string);
+	new_node->str = newstring;
 	new_node->len = _strlen(new_node->str);
 	new_node->next = *head;
 	*head = new_node;
-	if (new_node == NULL)
-	{
-		return (NULL);
-	}
 	return (new_node);
 
 }
