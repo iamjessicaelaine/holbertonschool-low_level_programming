@@ -13,9 +13,9 @@ void free_listint2(listint_t **head)
 	listint_t *freedom = *head;
 	listint_t *next = NULL;
 
-	if (freedom == NULL)
+	if (head == NULL)
 	{
-		*head = NULL;
+		free(head);
 		free(freedom);
 		return;
 	}
