@@ -11,11 +11,10 @@ void free_listint2(listint_t **head)
 {
 	/* deref head to get the real head */
 	listint_t *freedom = *head;
-	listint_t *next = NULL;
+	listint_t *next;
 
-	if (freedom == NULL)
+	if (head == NULL)
 	{
-		*head = NULL;
 		return;
 	}
 	while (freedom != NULL)
@@ -24,7 +23,6 @@ void free_listint2(listint_t **head)
 		free(freedom);
 		freedom = next;
 	}
-	free(next);
 	/* deref head to affect the real head */
 	*head = NULL;
 }
