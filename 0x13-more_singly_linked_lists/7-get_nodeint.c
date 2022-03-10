@@ -10,6 +10,7 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *current = head;/* pointer to keep track of iteration */
+	listint_t *quickie; /* pointer to nth node */
 	unsigned int count = 0; /* variable to help me get to the nth node */
 
 	if (!index || head == NULL)
@@ -21,6 +22,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		count++;
 		current = current->next;
 	}
-	current = current->next;
-	return (current);
+	quickie = current->next;
+	return (quickie);
 }
