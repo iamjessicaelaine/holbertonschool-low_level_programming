@@ -8,5 +8,16 @@
 
 int pop_listint(listint_t **head)
 {
+	int retval; /* variable to store head node's data */
+	listint_t *next_node; /* keeps track of progress */
 
+	if (*head == NULL)
+	{
+		return (0);
+	}
+	next_node = (*head)->next;
+	retval = (*head)->n;
+	free(*head);
+	*head = next_node;
+	return (retval);
 }
