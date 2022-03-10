@@ -9,21 +9,19 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *current = head; /* protects head pointer and keeps
-				    * keeps track of iteration.
-				    */
-	unsigned int count = 0; /* the index of the node we're looking at */
-	listint_t *retrieved;
+	listint_t *current = head;/* pointer to keep track of iteration */
+	listint_t *quickie; /* pointer to nth node */
+	unsigned int count = 0; /* variable to help me get to the nth node */
 
-	while (current != NULL)
+	if (!index || head == NULL)
 	{
-		if (count == index)
-		{
-			retrieved = current;
-			return(retrieved);
-		}
+		return (NULL);
+	}
+	while (current != NULL && count < index - 1)
+	{
 		count++;
 		current = current->next;
 	}
-	return(NULL);
+	quickie = current->next;
+	return (quickie);
 }
