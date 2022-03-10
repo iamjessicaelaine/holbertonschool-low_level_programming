@@ -10,13 +10,14 @@
 void free_listint2(listint_t **head)
 {
 	/* deref head to get the real head */
-	listint_t *freedom = *head;
+	listint_t *freedom;
 	listint_t *next;
 
 	if (head == NULL)
 	{
 		return;
 	}
+	freedom = *head;
 	while (freedom != NULL)
 	{
 		next = freedom->next;
