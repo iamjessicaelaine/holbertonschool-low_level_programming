@@ -10,7 +10,7 @@ Responses for tasks within Project 0x15 in Course PP1200 at Holberton School.
 ## Additional Project Notes
 - Header file **main.h** contains all necessary preprocessor directives for functions to func, including function prototypes and structures.
 - Directory does include additional code for functions used to create the implementation of the numbered functions above (ex. *_putchar.c*).
-- All ** *number* **-main.c files included were used to test the functions (numbers in main.c name correspond to the function with the same number in it its name.
+- All *number*-main.c files included were used to test the functions (numbers in main.c name correspond to the function with the same number in it its name.
 - Files name by a single letter are the executables created for function testing.
 ## Contact
 Jessica Loyd is the only contributor to this directory and she can be reached by email at 4239@holbertonschool.com.
