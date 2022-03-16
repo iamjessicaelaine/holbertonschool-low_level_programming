@@ -5,7 +5,7 @@
  * @filename: points to the text file to be read
  * @letters: the number of letters it should read and print
  * Return: the actual number of letters it could read and print or returns 0 if
- * the file cannot be opened or read, if the filename is NULL, or if write fails
+ * the file cannot be opened or read, if the filename is NULL, or if write fals
  * or does not write the expected amount of bytes.
  */
 
@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* void *buffer = malloc(filesize); buffer arg 4 read & write */
 
-	if (buffer ==NULL || filename == NULL)
+	if (buffer == NULL || filename == NULL)
 	{
 		return (0);
 	}
