@@ -12,13 +12,11 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int filedescriptor; /* return value of open */
-	ssize_t actualfactual; /* actual number of letters read & printed */
-	ssize_t actualwrite;
-	void *buffer = malloc(sizeof(letters));
+	ssize_t actualread; /* actual number of letters read */
+	ssize_t actualwrite; /* actual number of letters written */
+	void *buffer;
 
-	/* void *buffer = malloc(filesize); buffer arg 4 read & write */
-
-	if (buffer == NULL || filename == NULL)
+	if (filename == NULL)
 	{
 		return (0);
 	}
@@ -27,16 +25,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	actualfactual = read(filedescriptor, buffer, letters);
-	if (actualfactual == -1)
+	buffer = malloc(letters * sizeof(char));
+	if (buffer == NULL)
 	{
+		close(filedescriptor);
 		return (0);
 	}
-	actualwrite = write(STDOUT_FILENO, buffer, actualfactual);
-	if (actualfactual == -1)
+	actualread = read(filedescriptor, buffer, letters);
+	close(filedescriptor);
+	if (actualread == -1)
 	{
+		free(buffer);
 		return (0);
 	}
-	else
-		return (actualwrite);
+	actualwrite = write(STDOUT_FILENO, buffer, actualread);
+	if (actualread != actualwrite)
+	{
+		free(buffer);
+		return (0);
+	}
+	free(buffer);
+	return (actualwrite);
 }
