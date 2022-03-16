@@ -1,4 +1,4 @@
-#Low Level Programming Projects at Holberton School
+# Low Level Programming Projects at Holberton School
 This repository contains direcories associated with the projects in courses:
 - **PP1000:** Beginning Procedural Programming
 - **PP1100:** Basic Procedural Programming
