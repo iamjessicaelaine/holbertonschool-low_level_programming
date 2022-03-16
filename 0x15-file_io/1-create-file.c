@@ -11,32 +11,5 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int filedescriptor; /* return value of open */
-	ssize_t actualfactual; /* actual number of letters read & printed */
-	ssize_t actualwrite;
-	void *buffer = malloc(sizeof(letters));
-
-	/* void *buffer = malloc(filesize); buffer arg 4 read & write */
-
-	if (buffer ==NULL || filename == NULL)
-	{
 		return (0);
-	}
-	filedescriptor = open(filename, O_RDONLY);
-	if (filedescriptor == -1)
-	{
-		return (0);
-	}
-	actualfactual = read(filedescriptor, buffer, letters);
-	if (actualfactual == -1)
-	{
-		return (0);
-	}
-	actualwrite = write(STDOUT_FILENO, buffer, actualfactual);
-	if (actualfactual == -1)
-	{
-		return (0);
-	}
-	else
-		return (actualwrite);
 }
