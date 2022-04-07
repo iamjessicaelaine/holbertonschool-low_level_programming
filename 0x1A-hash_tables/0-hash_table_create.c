@@ -21,12 +21,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 	newtable->array = calloc(newtable->size, sizeof(hash_node_t));
 	if (newtable->array == NULL)
 	{
+		free(newtable->array);
 		free(newtable);
 		return (NULL);
 	}
 	for (j = 0; j < newtable->size; j++)
 	{
-		newtable->array[j] = NULL; /* set items 2 NULL since, unused yet */
+		newtable->array[j] = NULL; /* items are null, bc new */
 	}
 	return (newtable);
 }
