@@ -22,7 +22,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (newtable->array == NULL)
 	{
 		free(newtable->array);
-		free(newtable);
 		return (NULL);
 	}
 	for (j = 0; j < newtable->size; j++)
