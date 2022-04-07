@@ -22,11 +22,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 	newtable->size = size;
-	newtable->array = (hash_node_t**)malloc(size * sizeof(hash_node_t));
+	newtable->array = (hash_node_t **)malloc(size * sizeof(hash_node_t *));
 	if (newtable->array == NULL)
 	{
+		free(newtable);
 		return (NULL);
 	}
-	memset(newtable->array, 0, size * sizeof(hash_node_t));
+	/* memset(newtable->array, 0, size * sizeof(hash_node_t)); */
 	return (newtable);
 }
