@@ -1,42 +1,54 @@
 #include "main.h"
 
+int _strlen(char *s);
+
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output
- * @filename: points to the text file to be read
- * @letters: the number of letters it should read and print
- * Return: the actual number of letters it could read and print or returns 0 if
- * the file cannot be opened or read, if the filename is NULL, or if write fails
- * or does not write the expected amount of bytes.
+ * append_text_to_file - appends text at the end of a file
+ * @filename: name of the file
+ * @text_content: null terminated string to add at the end of the file
+ * Return: 1 on success and -1 on failure
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+int append_text_to_file(const char *filename, char *text_content)
 {
-	int filedescriptor; /* return value of open */
-	ssize_t actualfactual; /* actual number of letters read & printed */
-	ssize_t actualwrite;
-	void *buffer = malloc(sizeof(letters));
+	int filedscrptr; /* open sys call return value */
+	ssize_t writereturns; /* write sys call return value */
 
-	/* void *buffer = malloc(filesize); buffer arg 4 read & write */
+	if (filename == NULL)
+	{
+		return (-1);
+	}
+	filedscrptr = open(filename, O_WRONLY | O_APPEND);
+	if (text_content == NULL)
+	{
+		if (filedscrptr == -1)
+		{
+			return (-1);
+		}
+		return (1);
+	}
+	writereturns = write(filedscrptr, text_content, _strlen(text_content));
+	if (writereturns < 0)
+	{
+		return (-1);
+	}
+	close(filedscrptr);
+	return (1);
+}
+/**
+ * _strlen  -  returns the length of a string
+ * @s: s is a string
+ * Return: return length of string for success
+*/
 
-	if (buffer ==NULL || filename == NULL)
+int _strlen(char *s)
+{
+	int purp = 0;
+
+	while (*s != '\0')
 	{
-		return (0);
+		purp++;
+		s++;
 	}
-	filedescriptor = open(filename, O_RDONLY);
-	if (filedescriptor == -1)
-	{
-		return (0);
-	}
-	actualfactual = read(filedescriptor, buffer, letters);
-	if (actualfactual == -1)
-	{
-		return (0);
-	}
-	actualwrite = write(STDOUT_FILENO, buffer, actualfactual);
-	if (actualfactual == -1)
-	{
-		return (0);
-	}
-	else
-		return (actualwrite);
+	return (purp);
 }
